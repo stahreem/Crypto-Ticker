@@ -1,9 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 
 const app = express();
 dotenv.config({});
 
+// middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+
+// routes 
 import apiRoutes from "./routes/apiRoutes.js";
 app.use("/api/", apiRoutes);
 

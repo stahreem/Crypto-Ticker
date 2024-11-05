@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Ticker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Crypto Ticker</h1>
+
+    <div id="ticker-container">
+      <!-- Info Header Row -->
+      <div class="info-header">
+        <div>
+          0.1% <br />
+          5 Mins
+        </div>
+        <div>
+          0.96% <br />
+          1 Hour
+        </div>
+        <div class="main-price">₹ 26,56,110</div>
+        <div>
+          2.73% <br />
+          1 Day
+        </div>
+        <div>
+          7.51% <br />
+          7 Days
+        </div>
+      </div>
+
+      <!-- Ticker Table -->
+      <div class="ticker-table">
+        <!-- Table Header -->
+        <div class="ticker-header">
+          <div class="index">#</div>
+          <div class="platform">Platform</div>
+          <div class="last-price">Last Traded Price</div>
+          <div class="buy-sell">Buy / Sell Price</div>
+          <div class="volume">Volume</div>
+          <div class="base-unit">Base Unit</div>
+        </div>
+
+        <!-- Table Rows - Dynamic Content Will Be Inserted Here through java script  -->
+        <div id="ticker-rows"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -14,13 +14,14 @@ export const fetchAndSaveData = async (req, res) => {
 
     await tickersCollection.deleteMany({});
     await tickersCollection.insertMany(
-      data.map((item) => ({
+      data.map((item, index) => ({
+        index: index + 1,
         name: item.name,
-        last: item.last,
-        buy: item.buy,
-        sell: item.sell,
+        last: `₹ ${parseFloat(item.last).toLocaleString()}`,
+        buy: `₹ ${parseFloat(item.buy).toLocaleString()}`,
+        sell: `₹ ${parseFloat(item.sell).toLocaleString()}`,
         volume: item.volume,
-        base_unit: item.base_unit,
+        base_unit: item.base_unit
       }))
     );
 
